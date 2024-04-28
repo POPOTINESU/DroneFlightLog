@@ -50,3 +50,21 @@ MVPリリースまでに作成
 ・LINE APIで通知　LINE Messaging API
 ・Geocoderまたは、Google Maps Platform
 
+
+
+### 画面遷移図
+https://www.figma.com/file/ztOGy84DLiwyIF4IAc5K7c/%E7%84%A1%E9%A1%8C?type=whiteboard&node-id=0-1&t=5N2dmQcNTTz8GmL6-0
+
+
+### READMEに記載した機能
+- [ ] ユーザー作成機能
+- [ ] グループ作成機能
+- [ ] ログイン機能
+- [ ] パスワード変更機能
+- [ ] グループ毎に使用できる機体を分けれる機能
+- [ ] 飛行日誌登録機能(このページで、地名の入力、現在位置取得を行う)
+- [ ] 定期点検通知機能
+- [ ] ストップウォッチで時間記録機能
+
+
+
