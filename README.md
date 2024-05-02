@@ -59,3 +59,7 @@ MVPリリースまでに作成
 
 ・LINE APIで通知　LINE Messaging API
 
+
+### 画面遷移図
+https://www.figma.com/file/ztOGy84DLiwyIF4IAc5K7c/%E7%84%A1%E9%A1%8C?type=whiteboard&node-id=0-1&t=5N2dmQcNTTz8GmL6-0
+
