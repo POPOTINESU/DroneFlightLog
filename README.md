@@ -59,4 +59,3 @@ MVPリリースまでに作成
 
 ・LINE APIで通知　LINE Messaging API
 
-・Geocoderまたは、Google Maps Platform
