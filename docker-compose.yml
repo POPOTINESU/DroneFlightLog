@@ -1,11 +1,23 @@
 services:
-  frontend:
+  backend:
     build:
-      context: ./frontend
+      context: ./backend/
       dockerfile: Dockerfile.dev
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    image: api
     ports:
-      - "3000:5173"
+      - "3000:3000"
     volumes:
-      - ./frontend:/app
+      - ./backend:/backend
+    depends_on:
+      - db
+  db:
+    image: postgres:16.2-alpine3.19
+    ports:
+      - "5432:5432"
     environment:
-      - REACT_APP_API_URL=http://localhost:8000
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
