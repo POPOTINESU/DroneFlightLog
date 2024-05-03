@@ -18,3 +18,14 @@ services:
     env_file: ./database.env
     volumes:
       - ./postgres:/var/lib/postgresql/data
+  frontend:
+    build:
+      context: ./frontend/
+      dockerfile: Dockerfile.dev
+    image: frontend
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./frontend:/frontend
+    depends_on:
+      - backend
