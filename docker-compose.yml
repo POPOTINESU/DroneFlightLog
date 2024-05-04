@@ -1,14 +1,14 @@
 services:
   backend:
     build:
-      context: ./backend/
+      context: ./DroneFlightLog_backend/
       dockerfile: Dockerfile.dev
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     image: api
     ports:
       - "3000:3000"
     volumes:
-      - ./backend:/backend
+      - ./DroneFlightLog_backend:/backend
     depends_on:
       - db
     env_file:
@@ -20,12 +20,12 @@ services:
       - ./postgres:/var/lib/postgresql/data
   frontend:
     build:
-      context: ./frontend/
+      context: ./DroneFlightLog_frontend/
       dockerfile: Dockerfile.dev
     image: frontend
     ports:
       - "3001:3000"
     volumes:
-      - ./frontend:/frontend
+      - ./DroneFlightLog_frontend:/frontend
     depends_on:
       - backend
