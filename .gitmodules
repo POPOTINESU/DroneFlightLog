@@ -1,0 +1,6 @@
+[submodule "DroneFlightLog_backend"]
+	path = DroneFlightLog_backend
+	url = https://github.com/POPOTINESU/DroneFlightLog_backend.git
+[submodule "DroneFlightLog_frontend"]
+	path = DroneFlightLog_frontend
+	url = https://github.com/POPOTINESU/DroneFlightLog_frontend.git
