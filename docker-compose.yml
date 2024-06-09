@@ -27,5 +27,3 @@ services:
       - "3001:3000"
     volumes:
       - ./DroneFlightLog_frontend:/frontend
-    depends_on:
-      - backend
