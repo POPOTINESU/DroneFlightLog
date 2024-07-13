@@ -1,0 +1,29 @@
+services:
+  backend:
+    build:
+      context: ./DroneFlightLog_backend/
+      dockerfile: Dockerfile.dev
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    image: api
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./DroneFlightLog_backend:/backend
+    depends_on:
+      - db
+    env_file:
+      - ./database.env
+  db:
+    image: postgres:16.2-alpine3.19
+    env_file: ./database.env
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+  frontend:
+    build:
+      context: ./DroneFlightLog_frontend/
+      dockerfile: Dockerfile.dev
+    image: frontend
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./DroneFlightLog_frontend:/frontend
